@@ -21,8 +21,11 @@ Apple hesabı, parola, sertifika ve cihaz eşleştirme dosyaları bulut derlemes
 1. Windows'a [resmî iloader](https://iloader.app/) ve [gerekli Apple USB sürücülerini](https://docs.sidestore.io/docs/installation/prerequisites) kur.
 2. Telefonu USB ile bağla ve bilgisayara güven. iloader'da kendi IPA dosyanı yükleme akışıyla **SadeIPA.ipa** seç.
 3. iPhone'da geliştirici hesabına güven ve istenirse Geliştirici Modu'nu aç.
-4. App Store'dan LocalDevVPN kur. Wi-Fi ve VPN açıkken **Ayarlar → Hesap ve kurulum** üzerinden aynı Apple hesabıyla giriş yap; eşleştirme gerekiyorsa iloader üzerinden tamamla.
-5. Önce yükleyicinin kendi imzasını yenile ve başarıyı kontrol et. Bilgisayar bağlantısını çıkardıktan sonra telefondan yenilemeyi doğrula.
+4. iloader **Manage Pairing File → Export** ile dosyayı `ALTPairingFile.mobiledevicepairing` adıyla kaydet. iTunes **Dosya Paylaşımı → Sade IPA → Dosya Ekle** üzerinden aktar. Uygulamanın adı değiştiği için iloader'ın otomatik SideStore listesinde görünmeyebilir.
+5. App Store'dan LocalDevVPN kur. Wi-Fi ve VPN açıkken **Ayarlar → Hesap ve kurulum** üzerinden aynı Apple hesabıyla giriş yap.
+6. Önce yükleyicinin kendi imzasını yenile ve başarıyı kontrol et. Bilgisayar bağlantısını çıkardıktan sonra telefondan yenilemeyi doğrula.
+
+Adım adım [iPhone kurulum rehberi](IPHONE-KURULUM.md).
 
 Ücretsiz hesapta imza 7 gün sürer ve yükleyici dahil 3 aktif uygulama sınırı vardır. Süre dolmadan yenile. iOS arka plan çalışmasını planladığı için belirli bir gün veya saatte otomatik yenileme garantisi yoktur. iOS güncellemesi, eşleştirme sorunu veya yükleyicinin imzasının dolması tekrar bilgisayar kullanımını gerektirebilir.
 
