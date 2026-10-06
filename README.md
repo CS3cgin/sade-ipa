@@ -2,7 +2,7 @@
 
 Türkçe, sade bir iPhone arayüzü: IPA dosyası seçme, yükleme, imzayı yenileme ve gerçek profil bitiş tarihinden kalan süreyi gösterme. Ücretsiz Apple hesabı ve ücretli Apple Developer hesabı aynı uygulamada desteklenir. Kişisel kullanım için SideStore üzerine hazırlanmış bir uyarlamadır.
 
-6 Ekim 2026 tarihinde [iOS derlemesi başarıyla tamamlandı](https://github.com/CS3cgin/sade-ipa/actions/runs/37455522254): Xcode 26.4.1, 10 sayaç testi, 0 hata. **Artifacts → SadeIPA** paketinde kişisel hesabınla imzalanacak `SadeIPA.ipa` bulunur. IPA'nın SHA-256 değeri `c013aefe9ba103483805192331de14097a31c034eed7863263d06b5873db143c`; boyutu 27.819.744 bayt. Cihazda ilk kurulum ve yenileme testi hâlâ gereklidir.
+6 Ekim 2026 tarihinde [iki hesap türünü destekleyen iOS derlemesi başarıyla tamamlandı](https://github.com/CS3cgin/sade-ipa/actions/runs/37513719194): Xcode 26.4.1, 13 sayaç testi, 0 hata. **Artifacts → SadeIPA** paketinde kişisel hesabınla imzalanacak `SadeIPA.ipa` bulunur. IPA'nın SHA-256 değeri `235110e14e2c155b77d4448357b4da2fb5872ea0c736f25d607e303ee29f0a8c`; boyutu 27.826.701 bayt. Cihazda iki hesap türüyle ilk kurulum ve yenileme testi hâlâ gereklidir.
 
 ## IPA üret
 
