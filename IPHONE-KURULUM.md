@@ -29,7 +29,7 @@ Eşleştirme dosyası yalnız senin cihazında kullanılmalıdır; GitHub'a yük
 
 1. App Store'dan **LocalDevVPN** kur. Wi-Fi'ye bağlan; LocalDevVPN'de **Connect** seç.
 2. Sade IPA'da **Ayarlar → Hesap ve kurulum** aç; iloader'da kullandığın Apple hesabıyla giriş yap.
-3. **Uygulamalar → Tümünü yenile** seç. Yükleyicinin kendi yenilemesi uygulamayı geçici olarak kapatabilir. Son aşamada beklerse Ana Ekran'a dön, 30 saniye bekle ve tekrar aç. İşlem sırasında uygulamayı uygulama değiştiriciden zorla kapatma.
+3. **Uygulamalar → Tümünü yenile** seç. Bu işlem profilleri günceller; uygulama açıkken tamamlanmalı ve düğmeler tekrar kullanılabilir olmalı. Ardından tek uygulamadaki **Yenile** düğmesiyle bir kez daha dene. İki denemede de ilerleme çubuğu kendiliğinden kapanmalı.
 4. Hata olmadığını ve gerçek imza bitiş tarihinin güncellendiğini kontrol et.
 5. USB bağlantısını çıkar; Wi-Fi ve LocalDevVPN açıkken bir yenilemeyi daha dene. Böylece bilgisayarsız kullanım cihaz üzerinde doğrulanmış olur.
 
@@ -43,6 +43,6 @@ Eşleştirme dosyası yalnız senin cihazında kullanılmalıdır; GitHub'a yük
 
 Hesap/takım değişimi yeni imzalama kimliği gerektirebilir; her uygulamanın verisinin korunacağı garanti değildir. İki hesap türünde giriş, kurulum ve kendini yenileme gerçek cihazda ayrıca doğrulanmalıdır. Sınırlar için [Apple](https://developer.apple.com/help/account/basics/about-your-developer-account) ve [SideStore](https://docs.sidestore.io/docs/faq) açıklamalarını inceleyebilirsin.
 
-Bir iOS güncellemesi veya eşleştirme kaydının bozulması yeniden Windows bağlantısı gerektirebilir. Kullanıcının iPhone 16 / iOS 27.0.1 cihazında kurulum, eşleştirme sonrası Hazır durumu ve kendini yenilemenin ardından Ana Ekran'a geçip yeniden açınca işlem çubuğunun kapanması gözlendi. USB olmadan yenileme, başka IPA yükleme, arka plan yenileme ve ücretli hesap testleri ayrıca yapılmalıdır.
+Bir iOS güncellemesi veya eşleştirme kaydının bozulması yeniden Windows bağlantısı gerektirebilir. Kullanıcının iPhone 16 / iOS 27.0.1 cihazında kurulum ve eşleştirme sonrası Hazır durumu gözlendi. Günlüklerde iki ardışık profil yenilemesi, veritabanı kaydı, widget ve bildirim işlemleri başarılı; ikinci işlem sonucunun arayüze aktarımında bekleme bildirildi. Arayüz artık işlem yöneticisini doğrudan izlemek yerine değişiklikleri ana iş parçacığına aktarır. Bu düzeltmenin cihazda tekrarlı yenileme testi yapılmalıdır. USB olmadan yenileme, başka IPA yükleme, arka plan yenileme ve ücretli hesap testleri ayrıca gereklidir.
 
 Kaynaklar: [SideStore kurulum rehberi](https://docs.sidestore.io/docs/installation/install), [iloader](https://iloader.app/), [iloader eşleştirme uygulaması](https://github.com/nab138/iloader/blob/v2.3.6/src-tauri/src/pairing.rs), [Apple USB dosya paylaşımı](https://support.apple.com/en-ca/guide/itunes/itns32636/windows).
