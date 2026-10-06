@@ -1,6 +1,6 @@
 # Sade IPA · iPhone'a ilk kurulum
 
-Bu bilgisayarda iLoader 2.3.6, iTunes ve Apple USB sürücüleri mevcut. İlk kurulum ücretsiz Apple hesabıyla Windows üzerinden yapılır. Derlenen paket kişisel hesabınla imzalanmadan iPhone'a kurulamaz.
+Bu bilgisayarda iLoader 2.3.6, iTunes ve Apple USB sürücüleri mevcut. İlk kurulum ücretsiz veya ücretli Apple hesabıyla Windows üzerinden yapılır. Derlenen paket kişisel hesabınla imzalanmadan iPhone'a kurulamaz.
 
 ## 1. IPA'yı yükle
 
@@ -32,6 +32,14 @@ Eşleştirme dosyası yalnız senin cihazında kullanılmalıdır; GitHub'a yük
 5. USB bağlantısını çıkar; Wi-Fi ve LocalDevVPN açıkken bir yenilemeyi daha dene. Böylece bilgisayarsız kullanım cihaz üzerinde doğrulanmış olur.
 
 Ücretsiz hesapta imza 7 gün sürer. Süre dolmadan yenile; **Son gün hatırlatması** ve **Arka planda yenileme** seçeneklerini Ayarlar'dan açabilirsin. iOS arka plan çalışma zamanını seçtiği için otomatik yenileme kesin saatinde garanti değildir. Yükleyici dahil 3 aktif uygulama sınırı vardır.
+
+## 4. Hesap türünü kontrol et veya değiştir
+
+**Ayarlar** ekranında seçili takımın hesap türü görünür. Ücretsiz hesapta 7 gün / 3 aktif uygulama; Apple Developer hesabında 365 güne kadar / 3 uygulama sınırı yok bilgisi gösterilir. Sayaç her zaman kurulu uygulamanın gerçek profil tarihini kullanır.
+
+Ücretli üyeliğin etkinleşince **Hesap ve kurulum** bölümünden hesabından çıkıp tekrar giriş yap; birden fazla takım sunulursa ücretli geliştirici takımını seç. Ardından **Tümünü yenile** ile yeni hesabınla imzala. Eski 7 günlük imza, yalnız üyeliği satın almakla uzamaz. Başarılı yenileme sonrasında listedeki bitiş tarihini kontrol et. Ücretsiz hesaba geri dönersen 3 aktif uygulama sınırı tekrar uygulanır.
+
+Hesap/takım değişimi yeni imzalama kimliği gerektirebilir; her uygulamanın verisinin korunacağı garanti değildir. İki hesap türünde giriş, kurulum ve kendini yenileme gerçek cihazda ayrıca doğrulanmalıdır. Sınırlar için [Apple](https://developer.apple.com/help/account/basics/about-your-developer-account) ve [SideStore](https://docs.sidestore.io/docs/faq) açıklamalarını inceleyebilirsin.
 
 Bir iOS güncellemesi veya eşleştirme kaydının bozulması yeniden Windows bağlantısı gerektirebilir. iPhone 16 / iOS 27.0.1 üzerinde kurulum, hesap girişi ve kendini yenileme henüz denenmedi.
 

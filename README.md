@@ -1,12 +1,12 @@
 # Sade IPA
 
-Türkçe, sade bir iPhone arayüzü: IPA dosyası seçme, yükleme, imzayı yenileme ve gerçek profil bitiş tarihinden kalan süreyi gösterme. Kişisel kullanım için SideStore üzerine hazırlanmış bir uyarlamadır.
+Türkçe, sade bir iPhone arayüzü: IPA dosyası seçme, yükleme, imzayı yenileme ve gerçek profil bitiş tarihinden kalan süreyi gösterme. Ücretsiz Apple hesabı ve ücretli Apple Developer hesabı aynı uygulamada desteklenir. Kişisel kullanım için SideStore üzerine hazırlanmış bir uyarlamadır.
 
 6 Ekim 2026 tarihinde [iOS derlemesi başarıyla tamamlandı](https://github.com/CS3cgin/sade-ipa/actions/runs/37455522254): Xcode 26.4.1, 10 sayaç testi, 0 hata. **Artifacts → SadeIPA** paketinde kişisel hesabınla imzalanacak `SadeIPA.ipa` bulunur. IPA'nın SHA-256 değeri `c013aefe9ba103483805192331de14097a31c034eed7863263d06b5873db143c`; boyutu 27.819.744 bayt. Cihazda ilk kurulum ve yenileme testi hâlâ gereklidir.
 
 ## IPA üret
 
-**Actions → Sade IPA derle → Run workflow → main → Run workflow** yolunu kullan. Derleme başarıyla tamamlandığında çalıştırma sayfasının **Artifacts → SadeIPA** bölümünden paketi indir ve ZIP'i aç. `SadeIPA.ipa`, Windows'ta iloader ile kendi ücretsiz Apple hesabın kullanılarak imzalanıp kurulmalıdır.
+**Actions → Sade IPA derle → Run workflow → main → Run workflow** yolunu kullan. Derleme başarıyla tamamlandığında çalıştırma sayfasının **Artifacts → SadeIPA** bölümünden paketi indir ve ZIP'i aç. `SadeIPA.ipa`, Windows'ta iloader ile kendi Apple hesabın kullanılarak imzalanıp kurulmalıdır.
 
 **Kaynak paketi bir IPA değildir.** Hesap girişi, yükleme, kendini yenileme ve iPhone 16 / iOS 27.0.1 uyumluluğu gerçek cihazda ayrıca doğrulanmalıdır.
 
@@ -29,7 +29,20 @@ Apple hesabı, parola, sertifika ve cihaz eşleştirme dosyaları bulut derlemes
 
 Adım adım [iPhone kurulum rehberi](IPHONE-KURULUM.md).
 
-Ücretsiz hesapta imza 7 gün sürer ve yükleyici dahil 3 aktif uygulama sınırı vardır. Süre dolmadan yenile. iOS arka plan çalışmasını planladığı için belirli bir gün veya saatte otomatik yenileme garantisi yoktur. iOS güncellemesi, eşleştirme sorunu veya yükleyicinin imzasının dolması tekrar bilgisayar kullanımını gerektirebilir.
+## Ücretsiz ve ücretli hesaplar
+
+Hesap türü, imzalama motorunun seçili Apple geliştirici takımından okunur. Giriş, çıkış ve takım değişiminde iki sekmedeki bilgi güncellenir. Bilinmeyen hesap ücretli sayılmaz; henüz giriş yapılmadıysa hesap sınırları varsayılmaz.
+
+| Hesap | Profil süresi | Aktif uygulama sınırı |
+| --- | --- | --- |
+| Ücretsiz Apple hesabı | 7 gün | Sade IPA dahil toplam 3 |
+| Apple Developer Program hesabı | 365 güne kadar | Ücretsiz hesaptaki 3 uygulama sınırı uygulanmaz |
+
+Sayaç ve son gün hatırlatması her uygulamanın **gerçek profil bitiş tarihini** kullanır. Üyeliği yükseltmek veya hesabı değiştirmek mevcut imzayı uzatmaz. **Ayarlar → Hesap ve kurulum** üzerinden yeni hesap/takımla giriş yaptıktan sonra uygulamaları o hesapla yenile. Takım değişimi yeni imzalama kimliği gerektirebilir; hata varsa süre ilerlemez. Ücretsiz hesaba dönerken motorun uygulama sınırı yeniden geçerlidir.
+
+İmzalama ve kurulum motoru SideStore'dan gelir; ücretsiz ve ücretli hesapla gerçek cihaz doğrulaması ayrıca gereklidir. Hesap sınırlarının kaynağı: [Apple](https://developer.apple.com/help/account/basics/about-your-developer-account), [SideStore](https://docs.sidestore.io/docs/faq).
+
+Süre dolmadan yenile. iOS arka plan çalışmasını planladığı için belirli bir gün veya saatte otomatik yenileme garantisi yoktur. iOS güncellemesi, eşleştirme sorunu veya yükleyicinin imzasının dolması tekrar bilgisayar kullanımını gerektirebilir.
 
 ## Lisans
 
