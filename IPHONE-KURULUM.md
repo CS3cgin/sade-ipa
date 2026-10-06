@@ -21,13 +21,15 @@ Bu uyarlamanın adı “Sade IPA” olduğu için iloader'ın SideStore adına g
 4. Apple Devices uygulaması cihazı yönetiyorsa aynı aktarımı o uygulamanın **Dosyalar / Files** bölümünden yap.
 5. Sade IPA'yı kapatıp yeniden aç. Dosya seçme isteği çıkarsa **Dosyalar → iPhone'umda → Sade IPA** içindeki eşleştirme dosyasını seç.
 
+Alternatif olarak dosyayı iloader'ın varsayılan `pairingFile.plist` adıyla kaydedip aynı yoldan aktarabilirsin. Sade IPA'yı tamamen kapatıp yeniden aç; **Select File / Dosya Seç** ile bu dosyayı seç. Uygulama dosyayı kendi beklediği adla kaydeder.
+
 Eşleştirme dosyası yalnız senin cihazında kullanılmalıdır; GitHub'a yükleme.
 
 ## 3. Telefondan ilk yenilemeyi doğrula
 
 1. App Store'dan **LocalDevVPN** kur. Wi-Fi'ye bağlan; LocalDevVPN'de **Connect** seç.
 2. Sade IPA'da **Ayarlar → Hesap ve kurulum** aç; iloader'da kullandığın Apple hesabıyla giriş yap.
-3. **Uygulamalar → Tümünü yenile** seç. Yükleyicinin kendi yenilemesi uygulamayı geçici olarak kapatabilir; birkaç saniye sonra tekrar aç.
+3. **Uygulamalar → Tümünü yenile** seç. Yükleyicinin kendi yenilemesi uygulamayı geçici olarak kapatabilir. Son aşamada beklerse Ana Ekran'a dön, 30 saniye bekle ve tekrar aç. İşlem sırasında uygulamayı uygulama değiştiriciden zorla kapatma.
 4. Hata olmadığını ve gerçek imza bitiş tarihinin güncellendiğini kontrol et.
 5. USB bağlantısını çıkar; Wi-Fi ve LocalDevVPN açıkken bir yenilemeyi daha dene. Böylece bilgisayarsız kullanım cihaz üzerinde doğrulanmış olur.
 
@@ -41,6 +43,6 @@ Eşleştirme dosyası yalnız senin cihazında kullanılmalıdır; GitHub'a yük
 
 Hesap/takım değişimi yeni imzalama kimliği gerektirebilir; her uygulamanın verisinin korunacağı garanti değildir. İki hesap türünde giriş, kurulum ve kendini yenileme gerçek cihazda ayrıca doğrulanmalıdır. Sınırlar için [Apple](https://developer.apple.com/help/account/basics/about-your-developer-account) ve [SideStore](https://docs.sidestore.io/docs/faq) açıklamalarını inceleyebilirsin.
 
-Bir iOS güncellemesi veya eşleştirme kaydının bozulması yeniden Windows bağlantısı gerektirebilir. iPhone 16 / iOS 27.0.1 üzerinde kurulum, hesap girişi ve kendini yenileme henüz denenmedi.
+Bir iOS güncellemesi veya eşleştirme kaydının bozulması yeniden Windows bağlantısı gerektirebilir. Kullanıcının iPhone 16 / iOS 27.0.1 cihazında kurulum, eşleştirme sonrası Hazır durumu ve kendini yenilemenin ardından Ana Ekran'a geçip yeniden açınca işlem çubuğunun kapanması gözlendi. USB olmadan yenileme, başka IPA yükleme, arka plan yenileme ve ücretli hesap testleri ayrıca yapılmalıdır.
 
 Kaynaklar: [SideStore kurulum rehberi](https://docs.sidestore.io/docs/installation/install), [iloader](https://iloader.app/), [iloader eşleştirme uygulaması](https://github.com/nab138/iloader/blob/v2.3.6/src-tauri/src/pairing.rs), [Apple USB dosya paylaşımı](https://support.apple.com/en-ca/guide/itunes/itns32636/windows).
