@@ -1,0 +1,83 @@
+name: Sade IPA derle
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: sade-ipa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Test et ve IPA üret
+    runs-on: macos-26
+    timeout-minutes: 90
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: "1"
+      TERM: xterm
+      SOURCE_ARCHIVE_SHA256: 8cadcbff045aeab9a6d9675cd9ae1e91a4df829085ec0e1b4569da9fc0411af2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Kaynak paketini doğrula ve aç
+        run: |
+          echo "${SOURCE_ARCHIVE_SHA256}  SadeIPA-Cloud.zip" | shasum -a 256 --check
+          unzip -q SadeIPA-Cloud.zip -d "$RUNNER_TEMP/sadeipa"
+
+      - name: Xcode seç
+        uses: maxim-lobanov/setup-xcode@v1.6.0
+        with:
+          xcode-version: "26.4.1"
+
+      - name: Paketleme aracını kur
+        run: |
+          if ! command -v ldid >/dev/null; then
+            brew install ldid
+          fi
+
+      - name: Sabitlenmiş kaynakları hazırla
+        working-directory: ${{ runner.temp }}/sadeipa/SadeIPA-Cloud
+        run: python3 scripts/fetch-upstream.py
+
+      - name: Sayaç testleri ve iOS derlemesi
+        working-directory: ${{ runner.temp }}/sadeipa/SadeIPA-Cloud
+        run: bash scripts/build-macos.sh 2>&1 | tee "$GITHUB_WORKSPACE/build.log"
+
+      - name: IPA dosyasını sakla
+        uses: actions/upload-artifact@v4
+        with:
+          name: SadeIPA
+          path: |
+            ${{ runner.temp }}/sadeipa/SadeIPA-Cloud/build/SadeIPA.ipa
+            ${{ runner.temp }}/sadeipa/SadeIPA-Cloud/build/SHA256SUMS.txt
+            ${{ runner.temp }}/sadeipa/SadeIPA-Cloud/build/BUILD-INFO.txt
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Derleme günlüğünü sakla
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: SadeIPA-derleme-gunlugu
+          path: build.log
+          if-no-files-found: ignore
+          retention-days: 7
+
+      - name: Sonucu göster
+        if: success()
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'SUMMARY'
+          ## IPA üretildi
+          **Artifacts → SadeIPA** paketini indir ve ZIP dosyasını aç.
+          **SadeIPA.ipa** dosyasını Windows'ta iloader ile kendi Apple hesabın kullanılarak imzala ve kur.
+          iPhone 16 / iOS 27.0.1 cihaz testi ayrıca yapılmalıdır.
+          SUMMARY
