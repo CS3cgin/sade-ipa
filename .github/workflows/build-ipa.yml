@@ -22,7 +22,7 @@ jobs:
     env:
       HOMEBREW_NO_AUTO_UPDATE: "1"
       TERM: xterm
-      SOURCE_ARCHIVE_SHA256: 8cadcbff045aeab9a6d9675cd9ae1e91a4df829085ec0e1b4569da9fc0411af2
+      SOURCE_ARCHIVE_SHA256: 0dff863508d26212c1788fc90676632594a7cc9d73ba85c4edaf0005bac6b423
     steps:
       - uses: actions/checkout@v4
         with:
