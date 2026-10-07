@@ -2,9 +2,9 @@
 
 Türkçe, sade bir iPhone uygulaması: IPA dosyası seçme, yükleme, imzayı yenileme ve kalan süreyi gösterme. Ücretsiz Apple hesabı ve ücretli Apple Developer hesabı desteklenir. Yazılım & Teknoloji — CSecgin.
 
-CSigner, önceki Sade IPA uygulamasının yeni adıdır. Yeni elma ikonu kırpılmadan gri zemine yerleştirilmiştir. Arayüz açık ve koyu moda uyumlu nötr gri kullanır. Ayarlar ekranındaki kurulum rehberi, altyapı bağlantısı ve hesap değiştirme açıklaması kaldırılmıştır.
+CSigner, önceki Sade IPA uygulamasının yeni adıdır. Derleme 0701, açılış ekranının adı/ikonunu ve yüklü uygulamalardaki CSigner ikonunu da günceller. Yenilemede kullanılan eski paket önbelleği gerçek dosyanın sürümü, derleme numarası ve adı karşılaştırılarak yenilenir. Yeni elma ikonu kırpılmadan gri zemine yerleştirilmiştir. Arayüz açık ve koyu moda uyumlu nötr gri kullanır. Ayarlar ekranındaki kurulum rehberi, altyapı bağlantısı ve hesap değiştirme açıklaması kaldırılmıştır.
 
-**7 Ekim 2026 durumu:** [CSigner derlemesi başarılı](https://github.com/CS3cgin/sade-ipa/actions/runs/37588625691). Xcode 26.4.1 ile IPA üretildi; 15 test, 0 hata. İndirilen IPA'nın SHA-256 manifesti, adı, ana ikonu, arm64 dosyası ve ZIP bütünlüğü doğrulandı. Derlenmiş iPhone/iPad ikonları kaynak görsel boyutlarıyla piksel düzeyinde birebir eşleşti. Yeni görünümün iPhone testi, USB çıkarılmış yenileme, başka IPA yükleme, ücretli hesap ve arka plan yenileme kontrolleri ayrıca yapılmalıdır.
+**7 Ekim 2026 durumu:** [CSigner derlemesi başarılı](https://github.com/CS3cgin/sade-ipa/actions/runs/37591851892). Xcode 26.4.1 ile IPA üretildi; 15 test, 0 hata. İndirilen IPA'nın SHA-256 manifesti, adı, ana ikonu, arm64 dosyası ve ZIP bütünlüğü doğrulandı. Derlenmiş iPhone/iPad ikonları kaynak görsel boyutlarıyla piksel düzeyinde birebir eşleşti. Yeni görünümün iPhone testi, USB çıkarılmış yenileme, başka IPA yükleme, ücretli hesap ve arka plan yenileme kontrolleri ayrıca yapılmalıdır.
 
 ## IPA üret
 
