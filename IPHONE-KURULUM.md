@@ -1,4 +1,4 @@
-# Sade IPA · iPhone'a ilk kurulum
+# CSigner · iPhone'a ilk kurulum
 
 Bu bilgisayarda iLoader 2.3.6, iTunes ve Apple USB sürücüleri mevcut. İlk kurulum ücretsiz veya ücretli Apple hesabıyla Windows üzerinden yapılır. Derlenen paket kişisel hesabınla imzalanmadan iPhone'a kurulamaz.
 
@@ -6,29 +6,29 @@ Bu bilgisayarda iLoader 2.3.6, iTunes ve Apple USB sürücüleri mevcut. İlk ku
 
 1. iPhone'u USB ile bağla, kilidini aç ve **Bu bilgisayara güven** isteğini onayla.
 2. Başlat menüsünden **iloader** aç. Apple hesabına iloader içinde giriş yap; doğrulama kodunu da burada gir.
-3. Telefonunu seç. **IPA yükle / Import IPA** seçeneğinde `build/SadeIPA.ipa` dosyasını seç.
+3. Telefonunu seç. **IPA yükle / Import IPA** seçeneğinde `build/CSigner.ipa` dosyasını seç.
 4. **Install SideStore (Stable)** düğmesi farklı bir paket indirir. Özel arayüz için kendi IPA dosyanı seç.
 5. Kurulum tamamlanınca iPhone'da **Ayarlar → Genel → VPN ve Aygıt Yönetimi → geliştirici hesabın** bölümünü açıp güven işlemini tamamla. iOS yeniden başlatmanı isteyebilir.
 6. **Ayarlar → Gizlilik ve Güvenlik → Geliştirici Modu** seçeneğini etkinleştir; yeniden başlatma ve sonraki onayları tamamla.
 
 ## 2. Eşleştirme dosyasını aktar
 
-Bu uyarlamanın adı “Sade IPA” olduğu için iloader'ın SideStore adına göre oluşturduğu otomatik eşleştirme listesinde görünmeyebilir. Dosyayı USB ile aktarabilirsin:
+Bu uyarlamanın adı “CSigner” olduğu için iloader'ın SideStore adına göre oluşturduğu otomatik eşleştirme listesinde görünmeyebilir. Dosyayı USB ile aktarabilirsin:
 
 1. iloader'da **Eşleştirme dosyasını yönet / Manage Pairing File** bölümünü aç.
 2. **Dışa aktar / Export** ile dosyayı bilgisayarına `ALTPairingFile.mobiledevicepairing` adıyla kaydet. Dosya adı uzantısıyla birlikte böyle olmalı; sonunda `.plist` veya `.txt` kalmamalı.
-3. iTunes'ta iPhone simgesine tıkla → **Dosya Paylaşımı / File Sharing** → **Sade IPA** → **Dosya Ekle / Add**. Kaydettiğin dosyayı seç.
+3. iTunes'ta iPhone simgesine tıkla → **Dosya Paylaşımı / File Sharing** → **CSigner** → **Dosya Ekle / Add**. Kaydettiğin dosyayı seç.
 4. Apple Devices uygulaması cihazı yönetiyorsa aynı aktarımı o uygulamanın **Dosyalar / Files** bölümünden yap.
-5. Sade IPA'yı kapatıp yeniden aç. Dosya seçme isteği çıkarsa **Dosyalar → iPhone'umda → Sade IPA** içindeki eşleştirme dosyasını seç.
+5. CSigner'yı kapatıp yeniden aç. Dosya seçme isteği çıkarsa **Dosyalar → iPhone'umda → CSigner** içindeki eşleştirme dosyasını seç.
 
-Alternatif olarak dosyayı iloader'ın varsayılan `pairingFile.plist` adıyla kaydedip aynı yoldan aktarabilirsin. Sade IPA'yı tamamen kapatıp yeniden aç; **Select File / Dosya Seç** ile bu dosyayı seç. Uygulama dosyayı kendi beklediği adla kaydeder.
+Alternatif olarak dosyayı iloader'ın varsayılan `pairingFile.plist` adıyla kaydedip aynı yoldan aktarabilirsin. CSigner'yı tamamen kapatıp yeniden aç; **Select File / Dosya Seç** ile bu dosyayı seç. Uygulama dosyayı kendi beklediği adla kaydeder.
 
 Eşleştirme dosyası yalnız senin cihazında kullanılmalıdır; GitHub'a yükleme.
 
 ## 3. Telefondan ilk yenilemeyi doğrula
 
 1. App Store'dan **LocalDevVPN** kur. Wi-Fi'ye bağlan; LocalDevVPN'de **Connect** seç.
-2. Sade IPA'da **Ayarlar → Hesap ve kurulum** aç; iloader'da kullandığın Apple hesabıyla giriş yap.
+2. CSigner'da **Ayarlar → Hesap ve kurulum** aç; iloader'da kullandığın Apple hesabıyla giriş yap.
 3. **Uygulamalar → Tümünü yenile** seç. Bu işlem profilleri günceller; uygulama açıkken tamamlanmalı ve düğmeler tekrar kullanılabilir olmalı. Ardından tek uygulamadaki **Yenile** düğmesiyle bir kez daha dene. İki denemede de ilerleme çubuğu kendiliğinden kapanmalı.
 4. Hata olmadığını ve gerçek imza bitiş tarihinin güncellendiğini kontrol et.
 5. USB bağlantısını çıkar; Wi-Fi ve LocalDevVPN açıkken bir yenilemeyi daha dene. Böylece bilgisayarsız kullanım cihaz üzerinde doğrulanmış olur.
